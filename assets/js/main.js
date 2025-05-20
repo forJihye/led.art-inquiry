@@ -151,6 +151,15 @@ const setupValidationEvents = () => {
   });
 };
 
+const sendHeight = () => {
+  const height = document.body.scrollHeight;
+  console.log(height)
+  parent.postMessage({ type: 'resize', height }, '*');
+};
+
+window.addEventListener('load', sendHeight);
+window.addEventListener('resize', sendHeight);
+
 // 메인 함수
 const main = async() => {try {
   // bootstrap-select
@@ -164,7 +173,6 @@ const main = async() => {try {
 
   // 입력폼 유효성 검사
   setupValidationEvents();
-
 } catch(err){
   console.error(err);
 }}

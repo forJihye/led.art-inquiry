@@ -8,7 +8,7 @@ body {
 }
 main {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 .container-fluid {
@@ -19,7 +19,7 @@ main {
 }
 .inquiry-step {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   overflow: hidden;
   background-color: #fff;
@@ -181,7 +181,7 @@ textarea.form-control {
   font-size: 13px;
 }
 .item-terms__list li {
-  margin-bottom: 0;
+  margin-bottom: 3px;
 }
 .item-terms__list.icon li {
   position: relative;
@@ -282,6 +282,7 @@ textarea.form-control {
   border-bottom: 1.5px solid #999;
 }
 .form-checkbox .label-box .form-label {
+  min-height: auto;
   padding-left: 20px;
   position: relative;
   cursor: pointer;
