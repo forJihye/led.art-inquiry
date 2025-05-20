@@ -226,7 +226,7 @@ textarea.form-control {
   font-size: 13px;
   font-weight: normal;
   margin-bottom: 0;
-  font-weight: bold;
+  font-weight: 600;
 }
 .form-label.required::after {
   content: "*";
