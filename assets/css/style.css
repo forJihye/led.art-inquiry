@@ -89,7 +89,7 @@ textarea.form-control {
 .step-btn {
   width: 100%;
   text-align: center;
-  padding: 1.25em 0 0;
+  padding: 1.15em 0 1.15em;
 }
 .btn {
   width: 140px;
@@ -296,7 +296,7 @@ textarea.form-control {
 
 /* Step: 문의 완료 */
 .logo {
-  margin: 2em 0 10vh;
+  margin: 2em 0 5vh;
 }
 .logo img {
   height: 15px;

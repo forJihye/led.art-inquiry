@@ -86,7 +86,10 @@ const allCheckboxChange = () => {
 }
 
 // 약관 체크박스 상태 확인
-const termsCheckValid = ({ parentSelector, messageSelector = '.agree-msg' }) => {
+const termsCheckValid = ({ 
+  parentSelector, 
+  messageSelector = '.agree-msg' 
+}) => {
   const parent = document.querySelector(parentSelector); // 'input[name="agree"][required]'
   const checkboxs = parent.querySelectorAll('input[type="checkbox"][required]');
   const message = document.querySelector(messageSelector); // agree-msg
@@ -146,12 +149,6 @@ const setupValidationEvents = () => {
       });
     });
   });
-
-  // Step2: 필수 약관 체크박스 
-  const checkboxs = document.querySelectorAll('input[name="agree"][required]');
-  checkboxs.forEach((el) => {
-    el.onchange = () => termsCheckValid({ parentSelector: '#step2' });
-  })
 };
 
 // 메인 함수
