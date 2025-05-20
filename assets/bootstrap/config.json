@@ -1,0 +1,19 @@
+{
+  "vars": {},
+  "css": [
+    "forms.less",
+    "buttons.less",
+    "button-groups.less",
+    "input-groups.less",
+    "dropdowns.less",
+    "tooltip.less",
+    "popovers.less",
+    "modals.less"
+  ],
+  "js": [
+    "dropdown.js",
+    "modal.js",
+    "tooltip.js",
+    "tab.js"
+  ]
+}

@@ -1,0 +1,363 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 14px;
+  color: #121212;
+  letter-spacing: -0.5px;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.inquiry-step {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+.card-body {
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.row.center {
+  align-items: center;
+  justify-content: center;
+}
+/* Common css */
+.w-full {
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+.text-base {
+  font-size: 14px;
+}
+.text-large {
+  font-size: 20px;
+}
+.form-control {
+  box-shadow: none;
+}
+.form-control:focus {
+  border-color: #2563EB;
+  box-shadow: none;
+}
+select.form-control {
+  background-color: #fff;
+  background-image: url("../imgs/select-arrow.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px 7px;
+   -moz-appearance: none; /* Firefox */  
+   -webkit-appearance: none; /* Safari and Chrome */ 
+   appearance: none;
+}
+select.form-control:invalid {
+  color: #ccc;
+}
+select.form-control option {
+  color: #121212;
+}
+textarea.form-control {
+  resize: none;
+}
+.inquiry-bottom {
+  margin-top: auto;
+  width: 100%;
+}
+.step-btn {
+  width: 100%;
+  text-align: center;
+  padding: 1.25em 0 0;
+}
+.btn {
+  width: 140px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+}
+.btn.btn-outline-dark {
+  color: #121212;
+  border: 1px solid #121212;
+  background-color: #fff;
+}
+.btn.btn-outline-dark:hover {
+  color: #fff;
+  background-color: #121212;
+}
+.btn.btn-fill-dark {
+  color: #fff;
+  border: 1px solid #121212;
+  background-color: #121212;
+}
+.btn.btn-fill-dark:hover {
+  color: #121212;
+  border-color: #121212;
+  background-color: #fff;
+}
+
+/* Step1: 작품 선택 */
+.prod-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+.prod-box .prod-img {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+.prod-box .prod-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.prod-box .prod-content {
+  width: calc(100% - 80px);
+  flex: 1 0 auto;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.prod-box .prod-content .prod-name {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.25;
+}
+.item-terms__notice {
+  position: relative;
+  padding: 0.5em 0;
+  font-weight: bold;
+  font-size: 14px;
+  border-top: 1px solid #999;
+}
+.item-terms__notice .vaild-message {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  font-size: 13px;
+}
+.item-terms__list {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 10px;
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px solid #999;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+.item-terms__list li {
+  margin-bottom: 5px;
+}
+.item-terms__list.icon li {
+  position: relative;
+  padding-left: 20px;
+}
+.item-terms__list.icon li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 11px;
+  height: 9px;
+  background: url("../imgs/ico_check.png") no-repeat center / cover;
+}
+
+/* Step2: 문의폼 작성 */
+.form-container {
+  width: 100%;
+}
+.form-box {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.form-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.form-label.required::after {
+  content: "*";
+  display: inline-block;
+  color: #FF0000;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.vaild-message {
+  display: none;
+  font-size: 13px;
+  color: #ff0000;
+  font-weight: normal;
+  margin-top: 3px;
+}
+.item-terms__list.checkbox li {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-content: space-between;
+  font-size: 1em;
+}
+.terms-link {
+  text-decoration: underline;
+}
+.terms-link:hover, .terms-link:focus {
+  color: #121212;
+}
+
+.form-checkbox {
+  display: flex;
+  position: relative;
+}
+.form-checkbox input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  margin: -1px;
+  clip-path: inset(50%);
+}
+.form-checkbox .label-box {
+  position: relative;
+}
+.form-checkbox .label-box .check-icon {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 1px solid gray;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-checkbox .label-box .check-icon::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 30%;
+  height: 55%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-70%) rotateZ(40deg);
+  border-right: 1.5px solid #999;
+  border-bottom: 1.5px solid #999;
+}
+.form-checkbox .label-box .form-label {
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.form-checkbox input[type="checkbox"]:checked + .label-box .check-icon {
+  border-color:  #121212;
+  background-color: #121212;
+}
+.form-checkbox input[type="checkbox"]:checked + .label-box .check-icon::before {
+  border-color: #fff;
+}
+
+/* Step: 문의 완료 */
+.logo {
+  margin: 2em 0 10vh;
+}
+.logo img {
+  height: 15px;
+  margin: 0 auto;
+}
+.completed-msg {
+  font-size: 20px;
+  margin-bottom: 3vh;
+}
+
+/* Custom bootstrap-select */
+.form-control.bootstrap-select {
+  margin-bottom: 2px;
+}
+.btn.dropdown-toggle[data-id="nationalCode"] {
+  height: auto;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  text-transform: none;
+}
+.btn.dropdown-toggle[data-id="nationalCode"]:focus,
+.btn.dropdown-toggle[data-id="nationalCode"].focus {
+  box-shadow: none;
+}
+.bootstrap-select .dropdown-toggle .filter-option {
+  height: auto;
+}
+.bootstrap-select > .dropdown-toggle.bs-placeholder, 
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active, 
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus, 
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
+  outline: none !important;
+  background-color: #f2f2f2 !important;
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:focus, 
+.open > .dropdown-toggle.btn-default.focus {
+  outline: none !important;
+  background-color: #f2f2f2 !important;
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+.bootstrap-select .dropdown-toggle:focus, 
+.bootstrap-select > select.mobile-device:focus + .dropdown-toggle {
+  outline: none !important;
+}
+
+.dropdown-menu {
+  font-size: 13px;
+}
+.bootstrap-select .dropdown-menu > li > a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.btn:focus, 
+.btn:active:focus, 
+.btn.active:focus, 
+.btn.focus, 
+.btn:active.focus, 
+.btn.active.focus {
+  outline: none !important;
+}
