@@ -310,7 +310,7 @@ textarea.form-control {
 
 /* Custom bootstrap-select */
 .form-control.bootstrap-select {
-  margin-bottom: 2px;
+  margin-bottom: -1px;
 }
 .btn.dropdown-toggle[data-id="nationalCode"] {
   height: auto;
@@ -321,6 +321,10 @@ textarea.form-control {
 .btn.dropdown-toggle[data-id="nationalCode"]:focus,
 .btn.dropdown-toggle[data-id="nationalCode"].focus {
   box-shadow: none;
+}
+.bootstrap-select .dropdown-menu {
+  margin: 0;
+  margin-top: -1px;
 }
 .bootstrap-select .dropdown-toggle .filter-option {
   height: auto;
