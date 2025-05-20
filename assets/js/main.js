@@ -49,14 +49,17 @@ const validateField = ({
   // console.log("validateField", element, message, element.value);
   if (isNull(element.value)) {
     message.style.display = 'block';
+    element.style.borderColor = "#ff0000";
     return false;
   } 
   // 타입별 형식 검사
   if (type === 'email' && !isValidEmail(element.value)) {
     message.style.display = 'block';
+    element.style.borderColor = "#ff0000";
     return false;
   }
   message.style.display = 'none';
+  element.style.borderColor = "#ccc"
   return true;
 };
 
