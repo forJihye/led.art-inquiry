@@ -17,6 +17,10 @@ main {
   height: 100vh;
   overflow: hidden;
 }
+form {
+  width: 100%;
+  height: 100%;
+}
 .container-fluid {
   width: 100%;
   height: 100%;
@@ -402,6 +406,15 @@ textarea.form-control {
   }
   #step1 .inquiry-bottom {
     margin-top: 0.5em;
+  }
+  #step2.inquiry-step {
+    height: max-content;
+  }
+  #step2 .inquiry-bottom {
+    margin-top: 1em;
+  }
+  .prod-box {
+    border-bottom: none;
   }
   .item-terms__list {
     padding-left: 1em;

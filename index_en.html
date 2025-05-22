@@ -17,7 +17,14 @@
 <body>
   <main data-step="step1">
     <div class="container-fluid">
-      <form method="post" class="form" enctype="multipart/form-data" style="width: 100%; height: 100%;">
+      <form method="post" class="form" enctype="multipart/form-data">
+        <input type="hidden" name="locale" value="KO">
+        <input type="hidden" name="nationalCodeIdx" id="nationalCodeIdx" value="">
+        <input type="hidden" name="license" value="SINGLE">
+        <input type="hidden" name="plan" value="ONE-TIME">
+        <input type="hidden" name="content" value="298">
+        <input type="hidden" name="contentListJson" value="">
+
         <!-- Step1: 작품 선택 -->
         <div id="step1" class="inquiry-step">
           <div class="card-body">
@@ -83,7 +90,7 @@
                   <p class="vaild-message email-vaild">Include "@" in your email address.</p>
                 </div>
                 <div class="form-box">
-                  <label for="orderNm" class="form-label">PHONE NUMBER</label>
+                  <label for="nationalCode" class="form-label">PHONE NUMBER</label>
                   <select name="nationalCode" id="nationalCode" class="form-control selectpicker" data-live-search="true" data-dropup-auto="facebook" title="(SELECT COUNTRY)">
                     <option data-tokens="Afghanistan" value="+93" data-idx="1">Afghanistan (+93)</option>
                     <option data-tokens="Åland Islands" value="+358" data-idx="2">Åland Islands (+358)</option>
@@ -424,7 +431,7 @@
                   </li>
                 </ul>
                 <div class="step-btn">
-                  <button type="button" id="step2-btn" class="btn btn-outline-dark">send inquiry</button>
+                  <button type="submit" id="step2-btn" class="btn btn-outline-dark">send inquiry</button>
                 </div>
               </div>
             </div>

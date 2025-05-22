@@ -17,7 +17,14 @@
 <body>
   <main data-step="step1">
     <div class="container-fluid">
-      <form method="post" class="form" enctype="multipart/form-data" style="width: 100%; height: 100%;">
+      <form method="post" class="form" enctype="multipart/form-data">
+        <input type="hidden" name="locale" value="KO">
+        <input type="hidden" name="nationalCodeIdx" id="nationalCodeIdx" value="">
+        <input type="hidden" name="license" value="SINGLE">
+        <input type="hidden" name="plan" value="ONE-TIME">
+        <input type="hidden" name="content" value="298">
+        <input type="hidden" name="contentListJson" value="">
+        
         <!-- Step1: 작품 선택 -->
         <div id="step1" class="inquiry-step">
           <div class="card-body">
@@ -83,7 +90,7 @@
                   <p class="vaild-message email-vaild">이메일 주소가 올바르지 않습니다.</p>
                 </div>
                 <div class="form-box">
-                  <label for="orderNm" class="form-label">전화번호</label>
+                  <label for="nationalCode" class="form-label">전화번호</label>
                   <select name="nationalCode" id="nationalCode" class="form-control selectpicker" data-live-search="true" data-dropup-auto="facebook" title="(국가선택)">
                     <option data-tokens="Afghanistan" value="+93" data-idx="1">Afghanistan (+93)</option>
                     <option data-tokens="Åland Islands" value="+358" data-idx="2">Åland Islands (+358)</option>
