@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LED.ART - Inquiry</title>
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+</head>
+<body>
+  <main data-step="step1">
+    <div class="container-fluid">
+      <form method="post" class="form" enctype="multipart/form-data" style="width: 100%; height: 100%;">
+        <!-- Step1: 작품 선택 -->
+        <div id="step1" class="inquiry-step">
+          <div class="card-body">
+            <div class="row">
+              <div class="w-full">
+                <div class="prod-box">
+                  <div class="prod-img">
+                    <img src="https://cdn.imweb.me/upload/S20210707715d9125e2a94/c6a45e34a916e.jpg" alt="">
+                  </div>
+                  <div class="prod-content">
+                    <div class="prod-name w-full">
+                      <p>CHRISTMAS WONDERLAND</p>
+                    </div>
+                    <div class="prod-period w-full">
+                      <select name="duration" id="duration" class="form-control" required>
+                        <option value="" disabled selected hidden>(SELECT PERIOD)</option>
+                        <option value="1" data-code="PRIM" data-price="2000">ONE-TIME (~1 MONTHS)</option>
+                        <option value="3" data-code="PRIM" data-price="4000">3 MONTHS</option>
+                        <option value="6" data-code="PRIM" data-price="7000">6 MONTHS</option>
+                        <option value="12" data-code="PRIM" data-price="9000">12 MONTHS</option>
+                        <option value="99" data-code="PRIM" data-price="10000">PERMANENT</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <p class="vaild-message duration-vaild">Please select a period.</p>
+              </div>
+              <div class="inquiry-bottom">
+                <div class="item-terms__notice">
+                  <p>IMPORTANT NOTICE</p>
+                </div>
+                <ul class="item-terms__list icon">
+                  <li>Usage rights are granted for a single location only.</li>
+                  <li>This is a non-exclusive license; copyright remains with the licensor.</li>
+                  <li>Depending on the size and format of the media, additional charges may apply.</li>
+                  <li>Extra fees may apply for commercial use (e.g., advertising, paid exhibitions).</li>
+                </ul>
+                <div class="step-btn">
+                  <button type="button" id="step1-btn" class="btn btn-outline-dark">next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Step2: 문의폼 작성 -->
+        <div id="step2" class="inquiry-step">
+          <div class="card-body">
+            <div class="row">
+              <div class="form-container">
+                <div class="form-box required">
+                  <label for="orderNm" class="form-label required">NAME</label>
+                  <input type="text" id="orderNm" name="orderNm" class="form-control" placeholder="" maxlength="10">
+                  <p class="vaild-message name-valid">Please fill out this field.</p>
+                </div>
+                <div class="form-box">
+                  <label for="company" class="form-label">COMPANY / BRAND</label>
+                  <input type="text" id="company" name="company" class="form-control" placeholder="" maxlength="50">
+                </div>
+                <div class="form-box required">
+                  <label for="email" class="form-label required">EMAIL ADDRESS</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="" maxlength="50">
+                  <p class="vaild-message email-vaild">Include "@" in your email address.</p>
+                </div>
+                <div class="form-box">
+                  <label for="orderNm" class="form-label">PHONE NUMBER</label>
+                  <select name="nationalCode" id="nationalCode" class="form-control selectpicker" data-live-search="true" data-dropup-auto="facebook" title="(SELECT COUNTRY)">
+                    <option data-tokens="Afghanistan" value="+93" data-idx="1">Afghanistan (+93)</option>
+                    <option data-tokens="Åland Islands" value="+358" data-idx="2">Åland Islands (+358)</option>
+                    <option data-tokens="Albania" value="+355" data-idx="3">Albania (+355)</option>
+                    <option data-tokens="Algeria" value="+213" data-idx="4">Algeria (+213)</option>
+                    <option data-tokens="American Samoa" value="+1" data-idx="5">American Samoa (+1)</option>
+                    <option data-tokens="Andorra" value="+376" data-idx="6">Andorra (+376)</option>
+                    <option data-tokens="Angola" value="+244" data-idx="7">Angola (+244)</option>
+                    <option data-tokens="Anguilla" value="+1" data-idx="8">Anguilla (+1)</option>
+                    <option data-tokens="Antigua and Barbuda" value="+1" data-idx="9">Antigua and Barbuda (+1)</option>
+                    <option data-tokens="Argentina" value="+54" data-idx="10">Argentina (+54)</option>
+                    <option data-tokens="Armenia" value="+374" data-idx="11">Armenia (+374)</option>
+                    <option data-tokens="Aruba" value="+297" data-idx="12">Aruba (+297)</option>
+                    <option data-tokens="Ascension" value="+247" data-idx="13">Ascension (+247)</option>
+                    <option data-tokens="Australia" value="+61" data-idx="14">Australia (+61)</option>
+                    <option data-tokens="Australian Antarctic Territory" value="+672" data-idx="15">Australian Antarctic Territory (+672)</option>
+                    <option data-tokens="Australian External Territories" value="+672" data-idx="16">Australian External Territories (+672)</option>
+                    <option data-tokens="Austria" value="+43" data-idx="17">Austria (+43)</option>
+                    <option data-tokens="Azerbaijan" value="+994" data-idx="18">Azerbaijan (+994)</option>
+                    <option data-tokens="Bahamas" value="+1" data-idx="19">Bahamas (+1)</option>
+                    <option data-tokens="Bahrain" value="+973" data-idx="20">Bahrain (+973)</option>
+                    <option data-tokens="Bangladesh" value="+880" data-idx="21">Bangladesh (+880)</option>
+                    <option data-tokens="Barbados" value="+1" data-idx="22">Barbados (+1)</option>
+                    <option data-tokens="Barbuda" value="+1" data-idx="23">Barbuda (+1)</option>
+                    <option data-tokens="Belarus" value="+375" data-idx="24">Belarus (+375)</option>
+                    <option data-tokens="Belgium" value="+32" data-idx="25">Belgium (+32)</option>
+                    <option data-tokens="Belize" value="+501" data-idx="26">Belize (+501)</option>
+                    <option data-tokens="Benin" value="+229" data-idx="27">Benin (+229)</option>
+                    <option data-tokens="Bermuda" value="+1" data-idx="28">Bermuda (+1)</option>
+                    <option data-tokens="Bhutan" value="+975" data-idx="29">Bhutan (+975)</option>
+                    <option data-tokens="Bolivia" value="+591" data-idx="30">Bolivia (+591)</option>
+                    <option data-tokens="Bonaire" value="+599" data-idx="31">Bonaire (+599)</option>
+                    <option data-tokens="Bosnia and Herzegovina" value="+387" data-idx="32">Bosnia and Herzegovina (+387)</option>
+                    <option data-tokens="Botswana" value="+267" data-idx="33">Botswana (+267)</option>
+                    <option data-tokens="Brazil" value="+55" data-idx="34">Brazil (+55)</option>
+                    <option data-tokens="British Indian Ocean Territory" value="+246" data-idx="35">British Indian Ocean Territory (+246)</option>
+                    <option data-tokens="British Virgin Islands" value="+1" data-idx="36">British Virgin Islands (+1)</option>
+                    <option data-tokens="Brunei Darussalam" value="+673" data-idx="37">Brunei Darussalam (+673)</option>
+                    <option data-tokens="Bulgaria" value="+359" data-idx="38">Bulgaria (+359)</option>
+                    <option data-tokens="Burkina Faso" value="+226" data-idx="39">Burkina Faso (+226)</option>
+                    <option data-tokens="Burundi" value="+257" data-idx="40">Burundi (+257)</option>
+                    <option data-tokens="Cambodia" value="+855" data-idx="42">Cambodia (+855)</option>
+                    <option data-tokens="Cameroon" value="+237" data-idx="43">Cameroon (+237)</option>
+                    <option data-tokens="Canada" value="+1" data-idx="44">Canada (+1)</option>
+                    <option data-tokens="Cape Verde" value="+238" data-idx="41">Cape Verde (+238)</option>
+                    <option data-tokens="Caribbean Netherlands" value="+599" data-idx="45">Caribbean Netherlands (+599)</option>
+                    <option data-tokens="Cayman Islands" value="+1" data-idx="46">Cayman Islands (+1)</option>
+                    <option data-tokens="Central African Republic" value="+236" data-idx="47">Central African Republic (+236)</option>
+                    <option data-tokens="Chad" value="+235" data-idx="48">Chad (+235)</option>
+                    <option data-tokens="Chatham Island, New Zealand" value="+64" data-idx="49">Chatham Island, New Zealand (+64)</option>
+                    <option data-tokens="Chile" value="+56" data-idx="50">Chile (+56)</option>
+                    <option data-tokens="China" value="+86" data-idx="51">China (+86)</option>
+                    <option data-tokens="Christmas Island" value="+61" data-idx="52">Christmas Island (+61)</option>
+                    <option data-tokens="Cocos (Keeling) Islands" value="+61" data-idx="53">Cocos (Keeling) Islands (+61)</option>
+                    <option data-tokens="Colombia" value="+57" data-idx="54">Colombia (+57)</option>
+                    <option data-tokens="Comoros" value="+269" data-idx="55">Comoros (+269)</option>
+                    <option data-tokens="Congo" value="+242" data-idx="56">Congo (+242)</option>
+                    <option data-tokens="Congo, Democratic Republic of the (Zaire)" value="+243" data-idx="57">Congo, Democratic Republic of the (Zaire) (+243)</option>
+                    <option data-tokens="Cook Islands" value="+682" data-idx="58">Cook Islands (+682)</option>
+                    <option data-tokens="Costa Rica" value="+506" data-idx="59">Costa Rica (+506)</option>
+                    <option data-tokens="Croatia" value="+385" data-idx="61">Croatia (+385)</option>
+                    <option data-tokens="Cuba" value="+53" data-idx="62">Cuba (+53)</option>
+                    <option data-tokens="Curaçao" value="+599" data-idx="63">Curaçao (+599)</option>
+                    <option data-tokens="Cyprus" value="+357" data-idx="64">Cyprus (+357)</option>
+                    <option data-tokens="Czech Republic" value="+420" data-idx="65">Czech Republic (+420)</option>
+                    <option data-tokens="Denmark" value="+45" data-idx="66">Denmark (+45)</option>
+                    <option data-tokens="Diego Garcia" value="+246" data-idx="67">Diego Garcia (+246)</option>
+                    <option data-tokens="Djibouti" value="+253" data-idx="68">Djibouti (+253)</option>
+                    <option data-tokens="Dominica" value="+1" data-idx="69">Dominica (+1)</option>
+                    <option data-tokens="Dominican Republic" value="+1" data-idx="70">Dominican Republic (+1)</option>
+                    <option data-tokens="East Timor" value="+670" data-idx="239">East Timor (+670)</option>
+                    <option data-tokens="Easter Island" value="+56" data-idx="71">Easter Island (+56)</option>
+                    <option data-tokens="Ecuador" value="+593" data-idx="72">Ecuador (+593)</option>
+                    <option data-tokens="Egypt" value="+20" data-idx="73">Egypt (+20)</option>
+                    <option data-tokens="El Salvador" value="+503" data-idx="74">El Salvador (+503)</option>
+                    <option data-tokens="Equatorial Guinea" value="+240" data-idx="75">Equatorial Guinea (+240)</option>
+                    <option data-tokens="Eritrea" value="+291" data-idx="76">Eritrea (+291)</option>
+                    <option data-tokens="Estonia" value="+372" data-idx="77">Estonia (+372)</option>
+                    <option data-tokens="eSwatini" value="+268" data-idx="78">eSwatini (+268)</option>
+                    <option data-tokens="Ethiopia" value="+251" data-idx="79">Ethiopia (+251)</option>
+                    <option data-tokens="Falkland Islands" value="+500" data-idx="80">Falkland Islands (+500)</option>
+                    <option data-tokens="Faroe Islands" value="+298" data-idx="81">Faroe Islands (+298)</option>
+                    <option data-tokens="Fiji" value="+679" data-idx="82">Fiji (+679)</option>
+                    <option data-tokens="Finland" value="+358" data-idx="83">Finland (+358)</option>
+                    <option data-tokens="France" value="+33" data-idx="84">France (+33)</option>
+                    <option data-tokens="French Antilles" value="+596" data-idx="85">French Antilles (+596)</option>
+                    <option data-tokens="French Guiana" value="+594" data-idx="86">French Guiana (+594)</option>
+                    <option data-tokens="French Polynesia" value="+689" data-idx="87">French Polynesia (+689)</option>
+                    <option data-tokens="Gabon" value="+241" data-idx="88">Gabon (+241)</option>
+                    <option data-tokens="Gambia" value="+220" data-idx="89">Gambia (+220)</option>
+                    <option data-tokens="Georgia" value="+995" data-idx="90">Georgia (+995)</option>
+                    <option data-tokens="Germany" value="+49" data-idx="91">Germany (+49)</option>
+                    <option data-tokens="Ghana" value="+233" data-idx="92">Ghana (+233)</option>
+                    <option data-tokens="Gibraltar" value="+350" data-idx="93">Gibraltar (+350)</option>
+                    <option data-tokens="Greece" value="+30" data-idx="94">Greece (+30)</option>
+                    <option data-tokens="Greenland" value="+299" data-idx="95">Greenland (+299)</option>
+                    <option data-tokens="Grenada" value="+1" data-idx="96">Grenada (+1)</option>
+                    <option data-tokens="Guadeloupe" value="+590" data-idx="97">Guadeloupe (+590)</option>
+                    <option data-tokens="Guam" value="+1" data-idx="98">Guam (+1)</option>
+                    <option data-tokens="Guatemala" value="+502" data-idx="99">Guatemala (+502)</option>
+                    <option data-tokens="Guernsey" value="+44" data-idx="100">Guernsey (+44)</option>
+                    <option data-tokens="Guinea" value="+224" data-idx="101">Guinea (+224)</option>
+                    <option data-tokens="Guinea-Bissau" value="+245" data-idx="102">Guinea-Bissau (+245)</option>
+                    <option data-tokens="Guyana" value="+592" data-idx="103">Guyana (+592)</option>
+                    <option data-tokens="Haiti" value="+509" data-idx="104">Haiti (+509)</option>
+                    <option data-tokens="Honduras" value="+504" data-idx="105">Honduras (+504)</option>
+                    <option data-tokens="Hong Kong" value="+852" data-idx="106">Hong Kong (+852)</option>
+                    <option data-tokens="Hungary" value="+36" data-idx="107">Hungary (+36)</option>
+                    <option data-tokens="Iceland" value="+354" data-idx="108">Iceland (+354)</option>
+                    <option data-tokens="India" value="+91" data-idx="109">India (+91)</option>
+                    <option data-tokens="Indonesia" value="+62" data-idx="110">Indonesia (+62)</option>
+                    <option data-tokens="Inmarsat SNAC" value="+870" data-idx="111">Inmarsat SNAC (+870)</option>
+                    <option data-tokens="Iran" value="+98" data-idx="112">Iran (+98)</option>
+                    <option data-tokens="Iraq" value="+964" data-idx="113">Iraq (+964)</option>
+                    <option data-tokens="Ireland" value="+353" data-idx="114">Ireland (+353)</option>
+                    <option data-tokens="Isle of Man" value="+44" data-idx="115">Isle of Man (+44)</option>
+                    <option data-tokens="Israel" value="+972" data-idx="116">Israel (+972)</option>
+                    <option data-tokens="Italy" value="+39" data-idx="117">Italy (+39)</option>
+                    <option data-tokens="Ivory Coast" value="+225" data-idx="60">Ivory Coast (+225)</option>
+                    <option data-tokens="Jamaica" value="+1" data-idx="118">Jamaica (+1)</option>
+                    <option data-tokens="Jan Mayen" value="+47" data-idx="119">Jan Mayen (+47)</option>
+                    <option data-tokens="Japan" value="+81" data-idx="120">Japan (+81)</option>
+                    <option data-tokens="Jersey" value="+44" data-idx="121">Jersey (+44)</option>
+                    <option data-tokens="Jordan" value="+962" data-idx="122">Jordan (+962)</option>
+                    <option data-tokens="Kazakhstan" value="+7" data-idx="123">Kazakhstan (+7)</option>
+                    <option data-tokens="Kenya" value="+254" data-idx="124">Kenya (+254)</option>
+                    <option data-tokens="Kiribati" value="+686" data-idx="125">Kiribati (+686)</option>
+                    <option data-tokens="Korea, North" value="+850" data-idx="126">Korea, North (+850)</option>
+                    <option data-tokens="Korea, South" value="+82" data-idx="127">Korea, South (+82)</option>
+                    <option data-tokens="Kosovo" value="+383" data-idx="128">Kosovo (+383)</option>
+                    <option data-tokens="Kuwait" value="+965" data-idx="129">Kuwait (+965)</option>
+                    <option data-tokens="Kyrgyzstan" value="+996" data-idx="130">Kyrgyzstan (+996)</option>
+                    <option data-tokens="Laos" value="+856" data-idx="131">Laos (+856)</option>
+                    <option data-tokens="Latvia" value="+371" data-idx="132">Latvia (+371)</option>
+                    <option data-tokens="Lebanon" value="+961" data-idx="133">Lebanon (+961)</option>
+                    <option data-tokens="Lesotho" value="+266" data-idx="134">Lesotho (+266)</option>
+                    <option data-tokens="Liberia" value="+231" data-idx="135">Liberia (+231)</option>
+                    <option data-tokens="Libya" value="+218" data-idx="136">Libya (+218)</option>
+                    <option data-tokens="Liechtenstein" value="+423" data-idx="137">Liechtenstein (+423)</option>
+                    <option data-tokens="Lithuania" value="+370" data-idx="138">Lithuania (+370)</option>
+                    <option data-tokens="Luxembourg" value="+352" data-idx="139">Luxembourg (+352)</option>
+                    <option data-tokens="Macau" value="+853" data-idx="140">Macau (+853)</option>
+                    <option data-tokens="Madagascar" value="+261" data-idx="141">Madagascar (+261)</option>
+                    <option data-tokens="Malawi" value="+265" data-idx="142">Malawi (+265)</option>
+                    <option data-tokens="Malaysia" value="+60" data-idx="143">Malaysia (+60)</option>
+                    <option data-tokens="Maldives" value="+960" data-idx="144">Maldives (+960)</option>
+                    <option data-tokens="Mali" value="+223" data-idx="145">Mali (+223)</option>
+                    <option data-tokens="Malta" value="+356" data-idx="146">Malta (+356)</option>
+                    <option data-tokens="Marshall Islands" value="+692" data-idx="147">Marshall Islands (+692)</option>
+                    <option data-tokens="Martinique" value="+596" data-idx="148">Martinique (+596)</option>
+                    <option data-tokens="Mauritania" value="+222" data-idx="149">Mauritania (+222)</option>
+                    <option data-tokens="Mauritius" value="+230" data-idx="150">Mauritius (+230)</option>
+                    <option data-tokens="Mayotte" value="+262" data-idx="151">Mayotte (+262)</option>
+                    <option data-tokens="Mexico" value="+52" data-idx="152">Mexico (+52)</option>
+                    <option data-tokens="Micronesia, Federated States of" value="+691" data-idx="153">Micronesia, Federated States of (+691)</option>
+                    <option data-tokens="Midway Island, USA" value="+1" data-idx="154">Midway Island, USA (+1)</option>
+                    <option data-tokens="Moldova" value="+373" data-idx="155">Moldova (+373)</option>
+                    <option data-tokens="Monaco" value="+377" data-idx="156">Monaco (+377)</option>
+                    <option data-tokens="Mongolia" value="+976" data-idx="157">Mongolia (+976)</option>
+                    <option data-tokens="Montenegro" value="+382" data-idx="158">Montenegro (+382)</option>
+                    <option data-tokens="Montserrat" value="+1" data-idx="159">Montserrat (+1)</option>
+                    <option data-tokens="Morocco" value="+212" data-idx="160">Morocco (+212)</option>
+                    <option data-tokens="Mozambique" value="+258" data-idx="161">Mozambique (+258)</option>
+                    <option data-tokens="Myanmar" value="+95" data-idx="162">Myanmar (+95)</option>
+                    <option data-tokens="Nagorno-Karabakh" value="+374" data-idx="163">Nagorno-Karabakh (+374)</option>
+                    <option data-tokens="Namibia" value="+264" data-idx="164">Namibia (+264)</option>
+                    <option data-tokens="Nauru" value="+674" data-idx="165">Nauru (+674)</option>
+                    <option data-tokens="Nepal" value="+977" data-idx="166">Nepal (+977)</option>
+                    <option data-tokens="Netherlands" value="+31" data-idx="167">Netherlands (+31)</option>
+                    <option data-tokens="Nevis" value="+1" data-idx="168">Nevis (+1)</option>
+                    <option data-tokens="New Caledonia" value="+687" data-idx="169">New Caledonia (+687)</option>
+                    <option data-tokens="New Zealand" value="+64" data-idx="170">New Zealand (+64)</option>
+                    <option data-tokens="Nicaragua" value="+505" data-idx="171">Nicaragua (+505)</option>
+                    <option data-tokens="Niger" value="+227" data-idx="172">Niger (+227)</option>
+                    <option data-tokens="Nigeria" value="+234" data-idx="173">Nigeria (+234)</option>
+                    <option data-tokens="Niue" value="+683" data-idx="174">Niue (+683)</option>
+                    <option data-tokens="Norfolk Island" value="+672" data-idx="175">Norfolk Island (+672)</option>
+                    <option data-tokens="North Macedonia" value="+389" data-idx="176">North Macedonia (+389)</option>
+                    <option data-tokens="Northern Cyprus" value="+90" data-idx="177">Northern Cyprus (+90)</option>
+                    <option data-tokens="Northern Ireland" value="+44" data-idx="178">Northern Ireland (+44)</option>
+                    <option data-tokens="Northern Mariana Islands" value="+1" data-idx="179">Northern Mariana Islands (+1)</option>
+                    <option data-tokens="Norway" value="+47" data-idx="180">Norway (+47)</option>
+                    <option data-tokens="Oman" value="+968" data-idx="181">Oman (+968)</option>
+                    <option data-tokens="Pakistan" value="+92" data-idx="182">Pakistan (+92)</option>
+                    <option data-tokens="Palau" value="+680" data-idx="183">Palau (+680)</option>
+                    <option data-tokens="Palestine, State of" value="+970" data-idx="184">Palestine, State of (+970)</option>
+                    <option data-tokens="Panama" value="+507" data-idx="185">Panama (+507)</option>
+                    <option data-tokens="Papua New Guinea" value="+675" data-idx="186">Papua New Guinea (+675)</option>
+                    <option data-tokens="Paraguay" value="+595" data-idx="187">Paraguay (+595)</option>
+                    <option data-tokens="Peru" value="+51" data-idx="188">Peru (+51)</option>
+                    <option data-tokens="Philippines" value="+63" data-idx="189">Philippines (+63)</option>
+                    <option data-tokens="Pitcairn Islands" value="+64" data-idx="190">Pitcairn Islands (+64)</option>
+                    <option data-tokens="Poland" value="+48" data-idx="191">Poland (+48)</option>
+                    <option data-tokens="Portugal" value="+351" data-idx="192">Portugal (+351)</option>
+                    <option data-tokens="Puerto Rico" value="+1" data-idx="193">Puerto Rico (+1)</option>
+                    <option data-tokens="Qatar" value="+974" data-idx="194">Qatar (+974)</option>
+                    <option data-tokens="Réunion" value="+262" data-idx="195">Réunion (+262)</option>
+                    <option data-tokens="Romania" value="+40" data-idx="196">Romania (+40)</option>
+                    <option data-tokens="Russia" value="+7" data-idx="197">Russia (+7)</option>
+                    <option data-tokens="Rwanda" value="+250" data-idx="198">Rwanda (+250)</option>
+                    <option data-tokens="Saba" value="+599" data-idx="199">Saba (+599)</option>
+                    <option data-tokens="Saint Barthélemy" value="+590" data-idx="200">Saint Barthélemy (+590)</option>
+                    <option data-tokens="Saint Helena" value="+290" data-idx="201">Saint Helena (+290)</option>
+                    <option data-tokens="Saint Kitts and Nevis" value="+1" data-idx="202">Saint Kitts and Nevis (+1)</option>
+                    <option data-tokens="Saint Lucia" value="+1" data-idx="203">Saint Lucia (+1)</option>
+                    <option data-tokens="Saint Martin (France)" value="+590" data-idx="204">Saint Martin (France) (+590)</option>
+                    <option data-tokens="Saint Pierre and Miquelon" value="+508" data-idx="205">Saint Pierre and Miquelon (+508)</option>
+                    <option data-tokens="Saint Vincent and the Grenadines" value="+1" data-idx="206">Saint Vincent and the Grenadines (+1)</option>
+                    <option data-tokens="Samoa" value="+685" data-idx="207">Samoa (+685)</option>
+                    <option data-tokens="San Marino" value="+378" data-idx="208">San Marino (+378)</option>
+                    <option data-tokens="São Tomé and Príncipe" value="+239" data-idx="209">São Tomé and Príncipe (+239)</option>
+                    <option data-tokens="Saudi Arabia" value="+966" data-idx="210">Saudi Arabia (+966)</option>
+                    <option data-tokens="Senegal" value="+221" data-idx="211">Senegal (+221)</option>
+                    <option data-tokens="Serbia" value="+381" data-idx="212">Serbia (+381)</option>
+                    <option data-tokens="Seychelles" value="+248" data-idx="213">Seychelles (+248)</option>
+                    <option data-tokens="Sierra Leone" value="+232" data-idx="214">Sierra Leone (+232)</option>
+                    <option data-tokens="Singapore" value="+65" data-idx="215">Singapore (+65)</option>
+                    <option data-tokens="Sint Eustatius" value="+599" data-idx="216">Sint Eustatius (+599)</option>
+                    <option data-tokens="Sint Maarten (Netherlands)" value="+1" data-idx="217">Sint Maarten (Netherlands) (+1)</option>
+                    <option data-tokens="Slovakia" value="+421" data-idx="218">Slovakia (+421)</option>
+                    <option data-tokens="Slovenia" value="+386" data-idx="219">Slovenia (+386)</option>
+                    <option data-tokens="Solomon Islands" value="+677" data-idx="220">Solomon Islands (+677)</option>
+                    <option data-tokens="Somalia" value="+252" data-idx="221">Somalia (+252)</option>
+                    <option data-tokens="South Africa" value="+27" data-idx="222">South Africa (+27)</option>
+                    <option data-tokens="South Georgia and the South Sandwich Islands" value="+500" data-idx="223">South Georgia and the South Sandwich Islands (+500)</option>
+                    <option data-tokens="South Ossetia" value="+995" data-idx="224">South Ossetia (+995)</option>
+                    <option data-tokens="South Sudan" value="+211" data-idx="225">South Sudan (+211)</option>
+                    <option data-tokens="Spain" value="+34" data-idx="226">Spain (+34)</option>
+                    <option data-tokens="Sri Lanka" value="+94" data-idx="227">Sri Lanka (+94)</option>
+                    <option data-tokens="Sudan" value="+249" data-idx="228">Sudan (+249)</option>
+                    <option data-tokens="Suriname" value="+597" data-idx="229">Suriname (+597)</option>
+                    <option data-tokens="Svalbard" value="+47" data-idx="230">Svalbard (+47)</option>
+                    <option data-tokens="Sweden" value="+46" data-idx="231">Sweden (+46)</option>
+                    <option data-tokens="Switzerland" value="+41" data-idx="232">Switzerland (+41)</option>
+                    <option data-tokens="Syria" value="+963" data-idx="233">Syria (+963)</option>
+                    <option data-tokens="Taiwan" value="+886" data-idx="234">Taiwan (+886)</option>
+                    <option data-tokens="Tajikistan" value="+992" data-idx="235">Tajikistan (+992)</option>
+                    <option data-tokens="Tanzania" value="+255" data-idx="236">Tanzania (+255)</option>
+                    <option data-tokens="Telecommunications for Disaster Relief by OCHA" value="+888" data-idx="237">Telecommunications for Disaster Relief by OCHA (+888)</option>
+                    <option data-tokens="Thailand" value="+66" data-idx="238">Thailand (+66)</option>
+                    <option data-tokens="Togo" value="+228" data-idx="240">Togo (+228)</option>
+                    <option data-tokens="Tokelau" value="+690" data-idx="241">Tokelau (+690)</option>
+                    <option data-tokens="Tonga" value="+676" data-idx="242">Tonga (+676)</option>
+                    <option data-tokens="Transnistria" value="+373" data-idx="243">Transnistria (+373)</option>
+                    <option data-tokens="Trinidad and Tobago" value="+1" data-idx="244">Trinidad and Tobago (+1)</option>
+                    <option data-tokens="Tristan da Cunha" value="+290" data-idx="245">Tristan da Cunha (+290)</option>
+                    <option data-tokens="Tunisia" value="+216" data-idx="246">Tunisia (+216)</option>
+                    <option data-tokens="Turkey" value="+90" data-idx="247">Turkey (+90)</option>
+                    <option data-tokens="Turkmenistan" value="+993" data-idx="248">Turkmenistan (+993)</option>
+                    <option data-tokens="Turks and Caicos Islands" value="+1" data-idx="249">Turks and Caicos Islands (+1)</option>
+                    <option data-tokens="Tuvalu" value="+688" data-idx="250">Tuvalu (+688)</option>
+                    <option data-tokens="Uganda" value="+256" data-idx="251">Uganda (+256)</option>
+                    <option data-tokens="Ukraine" value="+380" data-idx="252">Ukraine (+380)</option>
+                    <option data-tokens="United Arab Emirates" value="+971" data-idx="253">United Arab Emirates (+971)</option>
+                    <option data-tokens="United Kingdom" value="+44" data-idx="254">United Kingdom (+44)</option>
+                    <option data-tokens="United States" value="+1" data-idx="255">United States (+1)</option>
+                    <option data-tokens="Uruguay" value="+598" data-idx="256">Uruguay (+598)</option>
+                    <option data-tokens="US Virgin Islands" value="+1" data-idx="257">US Virgin Islands (+1)</option>
+                    <option data-tokens="Uzbekistan" value="+998" data-idx="258">Uzbekistan (+998)</option>
+                    <option data-tokens="Vanuatu" value="+678" data-idx="259">Vanuatu (+678)</option>
+                    <option data-tokens="Vatican City State (Holy See)" value="+39" data-idx="260">Vatican City State (Holy See) (+39)</option>
+                    <option data-tokens="Venezuela" value="+58" data-idx="261">Venezuela (+58)</option>
+                    <option data-tokens="Vietnam" value="+84" data-idx="262">Vietnam (+84)</option>
+                    <option data-tokens="Wake Island, USA" value="+1" data-idx="263">Wake Island, USA (+1)</option>
+                    <option data-tokens="Wallis and Futuna" value="+681" data-idx="264">Wallis and Futuna (+681)</option>
+                    <option data-tokens="Yemen" value="+967" data-idx="265">Yemen (+967)</option>
+                    <option data-tokens="Zambia" value="+260" data-idx="266">Zambia (+260)</option>
+                    <option data-tokens="Zanzibar" value="+255" data-idx="267">Zanzibar (+255)</option>
+                  </select>
+                  <input type="phone" id="phone" name="phone" class="form-control" placeholder="PHONE NUMBER" maxlength="30">
+                </div>
+                <div class="form-box">
+                  <label for="purpose" class="form-label">YOUR MESSAGE </label>
+                  <textarea name="purpose" id="purpose" class="form-control" rows="3" placeholder="Let us briefly know how and where you plan to use it."></textarea>
+                </div>
+              </div>
+              <div class="inquiry-bottom">
+                <div class="item-terms__notice terms-valid">
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="all-check" name="all-check">
+                    <div class="label-box">
+                      <span class="check-icon" aria-hidden="true"></span>
+                      <label for="all-check" class="form-label">SELECT ALL</label>
+                    </div>
+                  </div>
+                  <p class="vaild-message agree-msg">Consent is required.</p>
+                </div>
+                <ul class="item-terms__list checkbox">
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="agree" id="agree1" class="checkbox-item" required>
+                      <div class="label-box">
+                        <span class="check-icon" aria-hidden="true"></span>
+                        <label for="agree1" class="form-label">(Required) Agree to collection of personal info.</label>
+                      </div>
+                    </div>
+                    <p><a href="https://kr.led.art/Privacy_policy" target="_blank" class="terms-link">전문보기</a></p>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="agree" id="agree2" class="checkbox-item" required>
+                      <div class="label-box">
+                        <span class="check-icon" aria-hidden="true"></span>
+                        <label for="agree2" class="form-label">(Required) Agree to license terms</label>
+                      </div>
+                    </div>
+                    <p><a href="https://kr.led.art/License_agreement" target="_blank" class="terms-link">전문보기</a></p>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="agree" id="agree3" class="checkbox-item" required>
+                      <div class="label-box">
+                        <span class="check-icon" aria-hidden="true"></span>
+                        <label for="agree3" class="form-label">(Required) Agree to service terms</label>
+                      </div>
+                    </div>
+                    <p><a href="https://kr.led.art/Terms_and_conditions" target="_blank" class="terms-link">전문보기</a></p>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="agree" id="agree4" class="checkbox-item">
+                      <div class="label-box">
+                        <span class="check-icon" aria-hidden="true"></span>
+                        <label for="agree4" class="form-label">(Optional) Agree to marketing use of personal data</label>
+                      </div>
+                    </div>
+                    <p><a href="https://kr.led.art/MARKETINGCONSENT" target="_blank" class="terms-link">전문보기</a></p>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="agree" id="agree5" class="checkbox-item">
+                      <div class="label-box">
+                        <span class="check-icon" aria-hidden="true"></span>
+                        <label for="agree5" class="form-label">(Optional) Agree to marketing & newsletter</label>
+                      </div>
+                    </div>
+                    <p><a href="https://kr.led.art/MARKETINGCONSENT" target="_blank" class="terms-link">전문보기</a></p>
+                  </li>
+                </ul>
+                <div class="step-btn">
+                  <button type="button" id="step2-btn" class="btn btn-outline-dark">send inquiry</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Step3: 문의 완료 -->
+        <div id="step3" class="inquiry-step">
+          <div class="card-body">
+            <div class="row center">
+              <div class="content text-center">
+                <div class="completed-msg">
+                  <p>We truly appreciate your inquiry.</p>
+                  <p>We’ll get back to you shortly.</p>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-fill-dark">close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

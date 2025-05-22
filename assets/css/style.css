@@ -394,6 +394,9 @@ textarea.form-control {
 
 
 @media (max-width: 480px) {
+  #step1.inquiry-step {
+    height: max-content;
+  }
   .item-terms__list {
     padding-left: 1em;
     padding-right: 1em;
