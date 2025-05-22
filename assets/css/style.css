@@ -400,6 +400,9 @@ textarea.form-control {
   #step1.inquiry-step {
     height: max-content;
   }
+  #step1 .inquiry-bottom {
+    margin-top: 150px;
+  }
   .item-terms__list {
     padding-left: 1em;
     padding-right: 1em;
