@@ -401,7 +401,7 @@ textarea.form-control {
     height: max-content;
   }
   #step1 .inquiry-bottom {
-    margin-top: 150px;
+    margin-top: 0.5em;
   }
   .item-terms__list {
     padding-left: 1em;
