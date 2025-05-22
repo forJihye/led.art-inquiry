@@ -17,7 +17,7 @@
 <body>
   <main data-step="step1">
     <div class="container-fluid">
-      <form method="post" class="form" enctype="multipart/form-data">
+      <form id="inquiry-form" method="post" class="form" enctype="multipart/form-data">
         <input type="hidden" name="locale" value="KO">
         <input type="hidden" name="nationalCodeIdx" id="nationalCodeIdx" value="">
         <input type="hidden" name="license" value="SINGLE">
@@ -381,7 +381,7 @@
                 <ul class="item-terms__list checkbox">
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree1" class="checkbox-item" required>
+                      <input type="checkbox" name="agree1" id="agree1" class="checkbox-item" required>
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree1" class="form-label">(필수) 개인정보 수집 이용 동의</label>
@@ -391,7 +391,7 @@
                   </li>
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree2" class="checkbox-item" required>
+                      <input type="checkbox" name="agree2" id="agree2" class="checkbox-item" required>
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree2" class="form-label">(필수) 라이선스 약관 동의</label>
@@ -401,7 +401,7 @@
                   </li>
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree3" class="checkbox-item" required>
+                      <input type="checkbox" name="agree3" id="agree3" class="checkbox-item" required>
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree3" class="form-label">(필수) 서비스 약관 동의</label>
@@ -411,7 +411,7 @@
                   </li>
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree4" class="checkbox-item">
+                      <input type="checkbox" name="agree4" id="agree4" class="checkbox-item">
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree4" class="form-label">(선택) 마케팅 목적 개인정보 수집 동의</label>
@@ -421,7 +421,7 @@
                   </li>
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree5" class="checkbox-item">
+                      <input type="checkbox" name="agree5" id="agree5" class="checkbox-item">
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree5" class="form-label">(선택) 정보성 광고 수신 동의</label>

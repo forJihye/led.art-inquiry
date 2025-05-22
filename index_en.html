@@ -17,7 +17,7 @@
 <body>
   <main data-step="step1">
     <div class="container-fluid">
-      <form method="post" class="form" enctype="multipart/form-data">
+      <form id="inquiry-form" method="post" class="form" enctype="multipart/form-data">
         <input type="hidden" name="locale" value="KO">
         <input type="hidden" name="nationalCodeIdx" id="nationalCodeIdx" value="">
         <input type="hidden" name="license" value="SINGLE">
@@ -381,7 +381,7 @@
                 <ul class="item-terms__list checkbox">
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree1" class="checkbox-item" required>
+                      <input type="checkbox" name="agree1" id="agree1" class="checkbox-item" required>
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree1" class="form-label">(Required) Agree to collection of personal info.</label>
@@ -391,7 +391,7 @@
                   </li>
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree2" class="checkbox-item" required>
+                      <input type="checkbox" name="agree2" id="agree2" class="checkbox-item" required>
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree2" class="form-label">(Required) Agree to license terms</label>
@@ -401,7 +401,7 @@
                   </li>
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree3" class="checkbox-item" required>
+                      <input type="checkbox" name="agree3" id="agree3" class="checkbox-item" required>
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree3" class="form-label">(Required) Agree to service terms</label>
@@ -411,7 +411,7 @@
                   </li>
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree4" class="checkbox-item">
+                      <input type="checkbox" name="agree4" id="agree4" class="checkbox-item">
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree4" class="form-label">(Optional) Agree to marketing use of personal data</label>
@@ -421,7 +421,7 @@
                   </li>
                   <li>
                     <div class="form-checkbox">
-                      <input type="checkbox" name="agree" id="agree5" class="checkbox-item">
+                      <input type="checkbox" name="agree5" id="agree5" class="checkbox-item">
                       <div class="label-box">
                         <span class="check-icon" aria-hidden="true"></span>
                         <label for="agree5" class="form-label">(Optional) Agree to marketing & newsletter</label>
@@ -431,7 +431,7 @@
                   </li>
                 </ul>
                 <div class="step-btn">
-                  <button type="submit" id="step2-btn" class="btn btn-outline-dark">send inquiry</button>
+                  <button type="button" id="step2-btn" class="btn btn-outline-dark">send inquiry</button>
                 </div>
               </div>
             </div>

@@ -75,7 +75,7 @@ const validateFieldsGroup = (fields) => {
 // 약관 체크박스 전체선택 처리
 const allCheckboxChange = () => {
   const checkAll = document.getElementById('all-check');
-  const checkItems = [...document.querySelectorAll('input[name="agree"]')];
+  const checkItems = [...document.querySelectorAll('input[name^="agree"]')];
   const message = document.querySelector('.agree-msg');
 
   checkAll.onchange = (ev) => {
@@ -126,7 +126,13 @@ const validationStep2 = () => {
     parentSelector: '#step2',
   });
 
-  if (isValid && isCheck) nextStep("step3");
+  if (isValid && isCheck) {
+    // 폼 데이터 전송
+    // console.log($('#inquiry-form').serialize());
+
+    // 완료화면 이동
+    nextStep("step3");
+  }
 };
 
 // 트리거 이벤트 구분하여 유효성 검사
@@ -153,15 +159,6 @@ const setupValidationEvents = () => {
     });
   });
 };
-
-const sendHeight = () => {
-  const height = document.body.scrollHeight;
-  console.log(height)
-  parent.postMessage({ type: 'resize', height }, '*');
-};
-
-window.addEventListener('load', sendHeight);
-window.addEventListener('resize', sendHeight);
 
 // 메인 함수
 const main = async() => {try {

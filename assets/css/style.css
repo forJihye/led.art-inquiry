@@ -411,14 +411,18 @@ textarea.form-control {
     height: max-content;
   }
   #step2 .inquiry-bottom {
-    margin-top: 1em;
+    margin-top: 0.5em;
   }
   .prod-box {
     border-bottom: none;
   }
+  .item-terms__notice {
+    padding-left: 0.5em;
+    padding-right: 0.5em
+  }
   .item-terms__list {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
   .item-terms__list.checkbox {
     padding-right: 0.5em;
