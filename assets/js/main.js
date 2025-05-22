@@ -160,6 +160,14 @@ const setupValidationEvents = () => {
   });
 };
 
+// 팝업창 닫기 이벤트
+const closePopup = () => {
+  document.getElementById('close-btn').addEventListener('click', () => {
+    window.parent.postMessage({ type: 'close-modal' }, '*');
+  });  
+}
+
+
 // 메인 함수
 const main = async() => {try {
   // bootstrap-select
@@ -173,6 +181,8 @@ const main = async() => {try {
 
   // 입력폼 유효성 검사
   setupValidationEvents();
+
+  closePopup();
 } catch(err){
   console.error(err);
 }}
