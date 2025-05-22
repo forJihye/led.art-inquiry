@@ -199,17 +199,16 @@ textarea.form-control {
 }
 .item-terms__list.icon li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 15px;
 }
 .item-terms__list.icon li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 6px;
   display: inline-block;
-  width: 11px;
-  height: 9px;
+  width: 10px;
+  height: 8px;
   background: url("../imgs/ico_check.png") no-repeat center / cover;
 }
 
@@ -251,8 +250,14 @@ textarea.form-control {
   font-size: 1em;
 }
 .terms-link {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  font-size: 0;
   color: #666;
   text-decoration: underline;
+  background: url('../imgs/arrow-right.png') no-repeat center / cover;
 }
 .terms-link:hover, .terms-link:focus {
   color: #121212;
@@ -282,8 +287,7 @@ textarea.form-control {
   border: 1px solid gray;
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 2px;
 }
 .form-checkbox .label-box .check-icon::before {
   content: "";
@@ -386,4 +390,15 @@ textarea.form-control {
 .btn:active.focus, 
 .btn.active.focus {
   outline: none !important;
+}
+
+
+@media (max-width: 480px) {
+  .item-terms__list {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .item-terms__list.checkbox {
+    padding-right: 0.5em;
+  }
 }
