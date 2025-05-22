@@ -100,6 +100,9 @@ textarea.form-control {
   text-align: center;
   padding: 1.15em 0 1.15em;
 }
+.step-btn .vaild-message {
+  margin-bottom: 5px;
+}
 .btn {
   width: 140px;
   height: 40px;
